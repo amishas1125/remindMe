@@ -4,12 +4,14 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_loggedin.*
 
 class loggedin : AppCompatActivity() {
     private lateinit var db: FirebaseFirestore
-    override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?)
+    {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_loggedin)
 
@@ -43,6 +45,13 @@ class loggedin : AppCompatActivity() {
         }
         else {
             setText(isLogin)
+        }
+
+        val btn=findViewById<Button>(R.id.event_btn)
+        btn.setOnClickListener{
+
+            val Intent = Intent(this,Events_page::class.java)
+            startActivity(Intent)
         }
     }
 

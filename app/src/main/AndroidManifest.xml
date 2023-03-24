@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RemindMe">
         <activity
+            android:name=".ADD_EVENTS"
+            android:exported="false" />
+        <activity
+            android:name=".Events_page"
+            android:exported="false" />
+        <activity
             android:name=".forgotpass_page"
             android:exported="false" />
         <activity
