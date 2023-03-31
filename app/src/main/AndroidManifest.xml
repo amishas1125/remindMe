@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.remindme">
 
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,6 +12,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RemindMe">
+        <activity
+            android:name=".update"
+            android:exported="false" />
+        <activity
+            android:name=".AfterUpdate"
+            android:exported="false" />
+        <activity
+            android:name=".viewEvents"
+            android:exported="false" />
         <activity
             android:name=".ADD_EVENTS"
             android:exported="false" />

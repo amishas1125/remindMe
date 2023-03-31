@@ -14,7 +14,7 @@
         android:ems="10"
         android:hint="Name"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.452"
@@ -28,7 +28,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Description"
+        android:hint="Description"
+        android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.452"
@@ -42,7 +43,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Location"
+        android:hint="Location"
+        android:text=""
         app:layout_constraintBottom_toTopOf="@+id/descid"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.452"
@@ -57,4 +59,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/descid" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

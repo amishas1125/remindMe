@@ -1,11 +1,8 @@
 package com.example.remindme
 
-import android.content.ContentUris
 import android.content.Intent
-import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.CalendarContract
 import android.widget.Button
 import kotlinx.android.synthetic.main.activity_events_page.*
 
@@ -20,9 +17,9 @@ class Events_page : AppCompatActivity() {
             startActivity(Intent)
         }
 
-        button2.setOnClickListener{
-
-
+        updatebtn.setOnClickListener{
+            val Intent = Intent(this, update::class.java)
+            startActivity(Intent)
 //            val eventID: Long = 208
 //            val uri: Uri = ContentUris.withAppendedId(CalendarContract.Events.CONTENT_URI, eventID)
 //            val intent = Intent(Intent.ACTION_EDIT)

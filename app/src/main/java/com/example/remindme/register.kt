@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.android.synthetic.main.activity_add_events.*
 import kotlinx.android.synthetic.main.activity_register.*
 
 class register : AppCompatActivity() {
@@ -24,6 +25,8 @@ class register : AppCompatActivity() {
                 var password = PasswordRegister.text.toString()
                 var phone = Phone.text.toString()
                 var name = Name.text.toString()
+
+
 
                 val user = hashMapOf(
                     "Name" to name,
