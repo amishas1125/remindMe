@@ -27,5 +27,10 @@ class Events_page : AppCompatActivity() {
 //                .putExtra(CalendarContract.Events.TITLE, "My New Title")
 //            startActivity(intent)
         }
+
+        delbtn.setOnClickListener{
+            val Intent = Intent(this, deleteEvent::class.java)
+            startActivity(Intent)
+        }
     }
 }
