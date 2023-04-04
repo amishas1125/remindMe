@@ -23,7 +23,7 @@ class deleteEvent : AppCompatActivity() {
             var delevename = deleventname.text.toString()
 
             if(delevename=="") {
-                Toast.makeText(this,"Enter the event name", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"Please Enter the event name", Toast.LENGTH_SHORT).show()
             }
 
             else {
