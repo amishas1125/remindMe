@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
 
                         }
                         else {
-                            Toast.makeText(this, "Unsuccessfull", Toast.LENGTH_LONG).show()
+                            Toast.makeText(this, "Unsuccessful", Toast.LENGTH_LONG).show()
                         }
                     }
             }
