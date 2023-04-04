@@ -25,6 +25,11 @@ class loggedin : AppCompatActivity() {
             finish()
         }
 
+        changepass.setOnClickListener{
+            var intent = Intent(this, ChangePassword::class.java)
+            startActivity(intent)
+        }
+
         if(isLogin=="1") {
             var email = intent.getStringExtra("Email")
             if(email != null) {
