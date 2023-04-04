@@ -53,6 +53,10 @@ class loggedin : AppCompatActivity() {
             val Intent = Intent(this,Events_page::class.java)
             startActivity(Intent)
         }
+
+
+
+
     }
 
     private fun setText(email: String?) {

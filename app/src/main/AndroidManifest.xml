@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RemindMe">
         <activity
+            android:name=".Change_password"
+            android:exported="false" />
+        <activity
             android:name=".deleteEvent"
             android:exported="false" />
         <activity

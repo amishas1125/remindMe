@@ -38,7 +38,8 @@ class MainActivity : AppCompatActivity() {
 
                            var verify= auth.currentUser?.isEmailVerified
 
-                            if(verify==true) {
+                            if(verify==true)
+                            {
                                 var intent = Intent(this,loggedin::class.java)
                                 intent.putExtra("Email",email)
                                 startActivity(intent)
