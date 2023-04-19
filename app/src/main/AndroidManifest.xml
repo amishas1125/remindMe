@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.READ_CALENDAR" />
     <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -12,6 +13,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RemindMe">
+        <activity
+            android:name=".SelectFile"
+            android:exported="false" />
+        <activity
+            android:name=".PdfReader"
+            android:exported="false" />
+        <activity
+            android:name=".EditProfile"
+            android:exported="false" />
+        <activity
+            android:name=".DetailedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".viewEvents"
+            android:exported="false" />
         <activity
             android:name=".ChangePassword"
             android:exported="false" />
@@ -23,9 +39,6 @@
             android:exported="false" />
         <activity
             android:name=".AfterUpdate"
-            android:exported="false" />
-        <activity
-            android:name=".viewEvents"
             android:exported="false" />
         <activity
             android:name=".ADD_EVENTS"

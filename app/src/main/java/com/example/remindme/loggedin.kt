@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.android.synthetic.main.activity_edit_profile.*
 import kotlinx.android.synthetic.main.activity_loggedin.*
 
 class loggedin : AppCompatActivity() {
@@ -27,6 +28,16 @@ class loggedin : AppCompatActivity() {
 
         changepass.setOnClickListener{
             var intent = Intent(this, ChangePassword::class.java)
+            startActivity(intent)
+        }
+
+        editProfile.setOnClickListener {
+            var intent = Intent(this, EditProfile::class.java)
+            startActivity(intent)
+        }
+
+        readpdf.setOnClickListener {
+            var intent = Intent(this, PdfReaderJava::class.java)
             startActivity(intent)
         }
 
@@ -58,8 +69,6 @@ class loggedin : AppCompatActivity() {
             val Intent = Intent(this,Events_page::class.java)
             startActivity(Intent)
         }
-
-
 
 
     }

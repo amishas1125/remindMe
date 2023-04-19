@@ -29,19 +29,14 @@ class Events_page : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
-        updatebtn.setOnClickListener{
-            val Intent = Intent(this, update::class.java)
-            startActivity(Intent)
-//            val eventID: Long = 208
-//            val uri: Uri = ContentUris.withAppendedId(CalendarContract.Events.CONTENT_URI, eventID)
-//            val intent = Intent(Intent.ACTION_EDIT)
-//                .setData(uri)
-//                .putExtra(CalendarContract.Events.TITLE, "My New Title")
-//            startActivity(intent)
+
+        selectfile.setOnClickListener {
+            var intent = Intent(this, SelectFile::class.java)
+            startActivity(intent)
         }
 
-        delbtn.setOnClickListener{
-            val Intent = Intent(this, deleteEvent::class.java)
+        vieweventbtn.setOnClickListener{
+            val Intent = Intent(this, viewEvents::class.java)
             startActivity(Intent)
         }
     }
