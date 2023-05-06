@@ -62,18 +62,10 @@
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/logout"
-        android:text="Log Out"
-        android:textSize="18sp"
-        android:layout_marginTop="50dp">
-
-    </Button>
 
     <Button
         android:id="@+id/event_btn"
+        android:layout_marginTop="50dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Events" />
@@ -91,8 +83,12 @@
         android:text="Edit Profile" />
 
     <Button
-        android:id="@+id/readpdf"
+        android:id="@+id/logout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:text="Log Out"
+        android:textSize="18sp">
+
+    </Button>
+
 </LinearLayout>

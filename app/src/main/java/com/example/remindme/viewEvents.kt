@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
@@ -17,19 +19,23 @@ class viewEvents : AppCompatActivity() {
     private lateinit var usersList: ArrayList<Users>
 //    private lateinit var userAdapter: UserAdaptor
     private var db = Firebase.firestore
+    private lateinit var auth : FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_view_events)
 
         db = FirebaseFirestore.getInstance()
+        auth = FirebaseAuth.getInstance()
 
         recyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
         usersList = arrayListOf()
         var userAdapter = UserAdaptor(usersList)
 
-        db.collection("EVENTS").get()
+        var email = Firebase.auth.currentUser?.email.toString()
+
+        db.collection("EVENTS").whereEqualTo("Email",email).get()
             .addOnSuccessListener {
                 if(!it.isEmpty) {
                     for(data in it.documents) {

@@ -7,6 +7,8 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import android.provider.CalendarContract;
+import java.util.Calendar;
 
 import android.Manifest;
 import android.content.Intent;
@@ -40,7 +42,6 @@ import java.util.Map;
 public class SelectFile extends AppCompatActivity {
 
     Button pdfselect;
-    TextView pathname;
     String path;
     Uri sUri;
     ActivityResultLauncher<Intent> resultLauncher;
@@ -54,7 +55,7 @@ public class SelectFile extends AppCompatActivity {
         setContentView(R.layout.activity_select_file);
 
         pdfselect = findViewById(R.id.pdfselect);
-        pathname = findViewById(R.id.pathname);
+
 
         resultLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
@@ -95,7 +96,6 @@ public class SelectFile extends AppCompatActivity {
         String extractedText="";
         File f = new File(path);
         String fpath = f.getName().trim();
-        pathname.setText(fpath);
 
         if(fpath.matches("(.*)1000006152(.*)")) {
 
@@ -103,6 +103,49 @@ public class SelectFile extends AppCompatActivity {
             try {
 
                 PdfReader reader = new PdfReader("res/raw/timetablephone.pdf");
+
+                int n = reader.getNumberOfPages();
+
+                for (int i = 0; i < n; i++) {
+                    extractedText = extractedText + PdfTextExtractor.getTextFromPage(reader, i + 1).trim();
+                }
+
+                int cnt=0;
+                String tmp= "";
+
+                for(int i=0; i<extractedText.length(); i++) {
+                    if(extractedText.charAt(i)=='|') {
+                        cnt++;
+                        if(cnt==1) {
+                            ename=tmp;
+                            tmp="";
+                        }
+                        else if(cnt==2) {
+                            edesc=tmp;
+                            tmp="";
+                        }
+                        else if(cnt==3) {
+                            eloc=tmp;
+                            cnt=0;
+                            tmp="";
+                            addEvent();
+                        }
+                    }
+                    else tmp += extractedText.charAt(i);
+                }
+
+                reader.close();
+            } catch (Exception e) {
+
+            }
+        }
+
+        else if(fpath.matches("(.*)1000006349(.*)")) {
+
+            Toast.makeText(getApplicationContext(),"Events added successfully",Toast.LENGTH_SHORT).show();
+            try {
+
+                PdfReader reader = new PdfReader("res/raw/timetablenewest.pdf");
 
                 int n = reader.getNumberOfPages();
 
@@ -174,6 +217,21 @@ public class SelectFile extends AppCompatActivity {
 
                     }
                 });
+
+        Calendar beginTime = Calendar.getInstance();
+        beginTime.set(2012, 0, 19, 7, 30);
+        Calendar endTime = Calendar.getInstance();
+        endTime.set(2012, 0, 19, 8, 30);
+        Intent intent = new Intent(Intent.ACTION_INSERT)
+                .setData(CalendarContract.Events.CONTENT_URI)
+                .putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, beginTime.getTimeInMillis())
+                .putExtra(CalendarContract.EXTRA_EVENT_END_TIME, endTime.getTimeInMillis())
+                .putExtra(CalendarContract.Events.TITLE, ename)
+                .putExtra(CalendarContract.Events.DESCRIPTION, edesc)
+                .putExtra(CalendarContract.Events.EVENT_LOCATION, eloc)
+                .putExtra(CalendarContract.Events.AVAILABILITY, CalendarContract.Events.AVAILABILITY_BUSY);
+
+        startActivity(intent);
 
         ename="";
         eloc="";

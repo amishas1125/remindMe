@@ -1,14 +1,18 @@
 package com.example.remindme
 
+import android.content.Intent
+import android.graphics.Path
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.gms.common.util.CollectionUtils.mapOf
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_detailed.*
+import java.util.*
 
 class DetailedActivity : AppCompatActivity() {
 
@@ -61,7 +65,11 @@ class DetailedActivity : AppCompatActivity() {
                             Toast.makeText(this,"Update unsuccessful",Toast.LENGTH_SHORT).show()
                         }
                 }
+
+                var intent = Intent(this, viewEvents::class.java)
+                startActivity(intent)
             }
+
         }
 
         detailedDelete.setOnClickListener {
@@ -79,6 +87,9 @@ class DetailedActivity : AppCompatActivity() {
                     .addOnFailureListener {
                         Toast.makeText(this,"Delete unsuccessful",Toast.LENGTH_SHORT).show()
                     }
+
+            var intent = Intent(this, viewEvents::class.java)
+            startActivity(intent)
 
         }
     }

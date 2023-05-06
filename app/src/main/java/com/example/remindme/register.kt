@@ -25,13 +25,19 @@ class register : AppCompatActivity() {
                 var password = PasswordRegister.text.toString()
                 var phone = Phone.text.toString()
                 var name = Name.text.toString()
+                var address = ""
+                var gender = ""
+                var college = ""
 
 
 
                 val user = hashMapOf(
                     "Name" to name,
                     "Phone" to phone,
-                    "Email" to email
+                    "Email" to email,
+                    "Address" to address,
+                    "Gender" to gender,
+                    "CollegeName" to college
                 )
 
                 val Users = db.collection("USERS")

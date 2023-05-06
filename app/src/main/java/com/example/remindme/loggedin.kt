@@ -36,10 +36,6 @@ class loggedin : AppCompatActivity() {
             startActivity(intent)
         }
 
-        readpdf.setOnClickListener {
-            var intent = Intent(this, PdfReaderJava::class.java)
-            startActivity(intent)
-        }
 
         if(isLogin=="1") {
             var email = intent.getStringExtra("Email")

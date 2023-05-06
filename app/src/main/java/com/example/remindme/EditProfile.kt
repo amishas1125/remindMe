@@ -35,6 +35,9 @@ class EditProfile : AppCompatActivity() {
                 editemail.text = tasks.get("Email").toString()
                 editName.setText(tasks.get("Name").toString())
                 editPhone.setText(tasks.get("Phone").toString())
+                addressfield.setText(tasks.get("Address").toString())
+                gendertext.setText(tasks.get("Gender").toString())
+                collegetext.setText(tasks.get("CollegeName").toString())
             }
         }
 
@@ -45,13 +48,19 @@ class EditProfile : AppCompatActivity() {
             else {
                 var newName = editName.text.toString()
                 var newPhone = editPhone.text.toString()
+                var address = addressfield.text.toString()
+                var gender = gendertext.text.toString()
+                var college = collegetext.text.toString()
 
 
                 if(email!=null) {
                     val new = mapOf(
                         "Email", email,
                         "Name", newName,
-                        "Phone", newPhone
+                        "Phone", newPhone,
+                        "Address", address,
+                        "Gender", gender,
+                        "CollegeName", college
                     )
 
                     db.collection("USERS").document(email).update(new as Map<String, Any>).addOnSuccessListener {
