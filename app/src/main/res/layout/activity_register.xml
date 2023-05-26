@@ -78,6 +78,7 @@
             android:layout_marginTop="10dp"
             android:layout_gravity="center_horizontal"
             android:hint="Phone Number"
+            android:inputType="phone"
             android:id="@+id/Phone"
             android:background="@drawable/custom_input2"
             android:drawableLeft="@drawable/baseline_phone_24"
