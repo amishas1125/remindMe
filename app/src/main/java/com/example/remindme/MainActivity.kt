@@ -13,18 +13,19 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        supportActionBar?.hide()
         auth= FirebaseAuth.getInstance()
 
         Register.setOnClickListener{
             var intent = Intent(this,register::class.java)
             startActivity(intent)
-            finish()
+            //finish()
         }
 
         forgotpass.setOnClickListener{
             var intent = Intent(this,forgotpass_page::class.java)
             startActivity(intent)
-            finish()
+            //finish()
         }
 
         Login.setOnClickListener{

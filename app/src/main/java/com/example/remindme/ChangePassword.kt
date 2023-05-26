@@ -1,5 +1,7 @@
 package com.example.remindme
 
+import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -16,8 +18,9 @@ class ChangePassword : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_change_password)
+        supportActionBar?.hide()
 
-
+        val sharedPref = this?.getPreferences(Context.MODE_PRIVATE)?:return
 
 
 
@@ -65,6 +68,13 @@ class ChangePassword : AppCompatActivity() {
 
                 }
             }
+        }
+
+        logoutreset.setOnClickListener {
+            sharedPref.edit().remove("Email").apply()
+            var intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
         }
 
     }

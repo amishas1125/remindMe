@@ -1,98 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/resetpwdbg"
+    android:orientation="vertical"
     tools:context=".EditProfile">
 
+    <Button
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:id="@+id/logoutedit"
+        android:background="@drawable/baseline_logout_24"
+        android:padding="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="15dp"
+        />
+
     <TextView
-        android:id="@+id/editemail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
-        android:text="TextView"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/baloo_chettan"
+        android:text="Edit Profile"
         android:textColor="@color/black"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="35dp" />
+
+
 
     <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="100dp"
         android:id="@+id/editName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:ems="10"
+        android:layout_gravity="center_horizontal"
         android:hint="Name"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editemail" />
+        android:background="@drawable/custom_input"
+        android:drawableLeft="@drawable/baseline_person_24"
+        android:paddingLeft="10dp"
+        android:drawablePadding="15dp"
+        android:ems="16"
+        >
 
+    </EditText>
     <EditText
-        android:id="@+id/editPhone"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:hint="Phone Number"
-        android:inputType="phone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editName" />
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:hint="Phone No"
+        android:background="@drawable/custom_input"
+        android:drawableLeft="@drawable/baseline_phone_24"
+        android:paddingLeft="10dp"
+        android:drawablePadding="15dp"
+        android:id="@+id/editPhone"
+        android:ems="16"
+        >
+
+    </EditText>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:hint="Address"
+        android:background="@drawable/custom_input"
+        android:drawableLeft="@drawable/baseline_location_on_24"
+        android:paddingLeft="10dp"
+        android:drawablePadding="15dp"
+        android:ems="16"
+        android:id="@+id/addressfield"
+        >
+
+    </EditText>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:hint="Gender"
+        android:id="@+id/gendertext"
+        android:background="@drawable/custom_input"
+        android:drawableLeft="@drawable/baseline_supervised_user_circle_24"
+        android:paddingLeft="10dp"
+        android:drawablePadding="15dp"
+        android:ems="16"
+        >
+
+    </EditText>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:hint="Collge Name"
+        android:id="@+id/collegetext"
+        android:background="@drawable/custom_input"
+        android:drawableLeft="@drawable/baseline_school_24"
+        android:paddingLeft="10dp"
+        android:drawablePadding="15dp"
+        android:ems="16"
+        >
+
+    </EditText>
 
     <Button
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
         android:id="@+id/editbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Done"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/collegetext" />
+        android:text="Update Profile"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center_horizontal"
+        android:padding="5dp"
+        android:backgroundTint="#5D88B1"
+        android:background="@drawable/round_btn"
+        android:textColor="#fff"
+        android:ems="16"
+        >
 
-    <EditText
-        android:id="@+id/addressfield"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:hint="Address"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editPhone" />
+    </Button>
 
-    <EditText
-        android:id="@+id/gendertext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:hint="Male/Female"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addressfield" />
 
-    <EditText
-        android:id="@+id/collegetext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:hint="College name"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gendertext" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

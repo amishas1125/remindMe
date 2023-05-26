@@ -21,6 +21,7 @@ class EditProfile : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit_profile)
+        supportActionBar?.hide()
 
         auth = FirebaseAuth.getInstance()
         db = FirebaseFirestore.getInstance()
@@ -32,12 +33,27 @@ class EditProfile : AppCompatActivity() {
         if(email != null) {
             db.collection("USERS").document(email).get().addOnSuccessListener {
                 tasks->
-                editemail.text = tasks.get("Email").toString()
+//                editemail.text = tasks.get("Email").toString()
                 editName.setText(tasks.get("Name").toString())
                 editPhone.setText(tasks.get("Phone").toString())
-                addressfield.setText(tasks.get("Address").toString())
-                gendertext.setText(tasks.get("Gender").toString())
-                collegetext.setText(tasks.get("CollegeName").toString())
+                if(tasks.get("Address").toString()!="") {
+                    addressfield.setText(tasks.get("Address").toString())
+                }
+                else {
+                    addressfield.setText("")
+                }
+                if(tasks.get("Gender").toString()!="") {
+                    gendertext.setText(tasks.get("Gender").toString())
+                }
+                else {
+                    gendertext.setText("")
+                }
+                if(tasks.get("CollegeName").toString()!="") {
+                    collegetext.setText(tasks.get("CollegeName").toString())
+                }
+                else {
+                    collegetext.setText("")
+                }
             }
         }
 
@@ -66,7 +82,7 @@ class EditProfile : AppCompatActivity() {
                     db.collection("USERS").document(email).update(new as Map<String, Any>).addOnSuccessListener {
                         Toast.makeText(this,"Successfully updated",Toast.LENGTH_SHORT).show()
                         sharedPref.edit().remove("Email").apply()
-                        var intent = Intent(this, MainActivity::class.java)
+                        var intent = Intent(this, loggedin::class.java)
                         startActivity(intent)
                         finish()
                     }
@@ -75,6 +91,13 @@ class EditProfile : AppCompatActivity() {
                         }
                 }
             }
+        }
+
+        logoutedit.setOnClickListener {
+            sharedPref.edit().remove("Email").apply()
+            var intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 }

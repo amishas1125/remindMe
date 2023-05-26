@@ -1,31 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/resetpwdbg"
+    android:orientation="vertical"
     tools:context=".SelectFile">
 
     <Button
-        android:id="@+id/pdfselect"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:id="@+id/logout2"
+        android:background="@drawable/baseline_logout_24"
+        android:padding="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="15dp"
+        />
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="236dp"
-        android:text="PDF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Select File"
+        android:textColor="@color/black"
+        android:fontFamily="@font/baloo_chettan"
+        android:layout_gravity="center_horizontal"
+        android:textSize="35dp"
+        />
+
 
     <Button
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:id="@+id/pdfselect"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/ic_baseline_picture_as_pdf_24"
+        />
+    <Button
+        android:layout_width="65dp"
+        android:layout_height="65dp"
         android:id="@+id/excelselect"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="116dp"
-        android:text="Excel"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pdfselect" />
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/ic_baseline_grid_on_24"
+        />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</LinearLayout>

@@ -10,6 +10,7 @@ class forgotpass_page : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_forgotpass_page)
+        supportActionBar?.hide()
 
         submitforgot.setOnClickListener{
             val email = emailforgot.text.toString()

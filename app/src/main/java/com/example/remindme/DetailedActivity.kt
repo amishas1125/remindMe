@@ -22,6 +22,7 @@ class DetailedActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detailed)
+        supportActionBar?.hide()
 
         val info = intent.getParcelableExtra<Users>("Info")
 
@@ -68,6 +69,7 @@ class DetailedActivity : AppCompatActivity() {
 
                 var intent = Intent(this, viewEvents::class.java)
                 startActivity(intent)
+                finish()
             }
 
         }
@@ -90,6 +92,7 @@ class DetailedActivity : AppCompatActivity() {
 
             var intent = Intent(this, viewEvents::class.java)
             startActivity(intent)
+            finish()
 
         }
     }

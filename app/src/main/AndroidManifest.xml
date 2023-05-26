@@ -9,17 +9,25 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher1"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_launcher1_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RemindMe">
         <activity
+            android:name=".splashActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".SelectFile"
-            android:exported="false" />
-<!--        <activity-->
-<!--            android:name=".PdfReader"-->
-<!--            android:exported="false" />-->
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name=".PdfReader" -->
+        <!-- android:exported="false" /> -->
         <activity
             android:name=".EditProfile"
             android:exported="false" />
@@ -31,16 +39,15 @@
             android:exported="false" />
         <activity
             android:name=".ChangePassword"
-            android:exported="false" />
-<!--        <activity-->
-<!--            android:name=".deleteEvent"-->
-<!--            android:exported="false" />-->
-<!--        <activity-->
-<!--            android:name=".update"-->
-<!--            android:exported="false" />-->
-<!--        <activity-->
-<!--            android:name=".AfterUpdate"-->
-<!--            android:exported="false" />-->
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name=".deleteEvent" -->
+        <!-- android:exported="false" /> -->
+        <!-- <activity -->
+        <!-- android:name=".update" -->
+        <!-- android:exported="false" /> -->
+        <!-- <activity -->
+        <!-- android:name=".AfterUpdate" -->
+        <!-- android:exported="false" /> -->
         <activity
             android:name=".ADD_EVENTS"
             android:exported="false" />
@@ -55,12 +62,8 @@
             android:exported="false" />
         <activity
             android:name=".loggedin"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="false">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity"

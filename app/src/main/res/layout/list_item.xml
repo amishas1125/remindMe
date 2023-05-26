@@ -17,15 +17,16 @@
             android:id="@+id/firstname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/baloo_chettan"
             android:text="First"
-            android:textColor="@color/teal_700"
+            android:textColor="@color/blue"
             android:textSize="23sp"/>
 
         <TextView
             android:id="@+id/lastdescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
+            android:textColor="@color/sky_blue"
             android:text="last" />
 
         <TextView
@@ -33,6 +34,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Location"
-            android:textColor="@color/black"/>
+            android:textColor="@color/sky_blue"/>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

@@ -1,53 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/eventbg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
     tools:context=".Events_page">
 
     <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
-        android:text="ADD"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/vieweventbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:text="VIEW"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/selectfile" />
-
-    <Button
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         android:id="@+id/logout1"
+        android:background="@drawable/baseline_logout_24"
+        android:padding="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="15dp"
+        />
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="log out"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.921"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.076" />
+        android:text="EVENTS"
+        android:textSize="30dp"
+        android:fontFamily="@font/baloo_chettan"
+        android:layout_marginTop="60dp"
+        android:textColor="@color/black"
+
+        android:padding="10dp"
+        />
 
     <Button
-        android:id="@+id/selectfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:text="Select file"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button1" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:text="View Events"
+        android:id="@+id/vieweventbtn"
+        android:background="@drawable/custom_input"
+        android:ems="16"
+        android:backgroundTint="#2196F3"
+        android:layout_marginTop="100dp"
+        android:drawableLeft="@drawable/ic_baseline_remove_red_eye_24"
+        android:paddingLeft="10dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        >
+
+        <Button
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:background="@drawable/ic_baseline_post_add_24"
+            android:padding="20dp"
+            android:id="@+id/button1"
+            android:layout_margin="15dp"/>
+        <Button
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:background="@drawable/ic_baseline_picture_as_pdf_24"
+            android:padding="20dp"
+            android:id="@+id/selectfile"
+            android:layout_margin="15dp"/>
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

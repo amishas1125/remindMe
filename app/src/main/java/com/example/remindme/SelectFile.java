@@ -54,6 +54,10 @@ public class SelectFile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_file);
 
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+
         pdfselect = findViewById(R.id.pdfselect);
 
 

@@ -24,6 +24,7 @@ class viewEvents : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_view_events)
+        supportActionBar?.hide()
 
         db = FirebaseFirestore.getInstance()
         auth = FirebaseAuth.getInstance()
@@ -58,6 +59,7 @@ class viewEvents : AppCompatActivity() {
             val intent = Intent(this, DetailedActivity::class.java)
             intent.putExtra("Info", it)
             startActivity(intent)
+            finish()
         }
 
 

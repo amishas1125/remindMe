@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".splashActivity"
+    android:background="@drawable/spl"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    >
+
+
+    <ImageView
+        android:layout_width="196dp"
+        android:layout_height="235dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="160dp"
+        android:src="@drawable/reminderlogo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="serif"
+        android:text="RemindMe"
+        android:textColor="#0B2270"
+        android:textSize="25sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:layout_gravity="center_horizontal"
+        android:text="SE Project"
+        android:textStyle="bold"
+        android:textColor="#BC0B2270"/>
+
+
+
+</LinearLayout>

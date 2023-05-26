@@ -12,6 +12,7 @@ class Events_page : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_events_page)
+        supportActionBar?.hide()
 
         val btn = findViewById<Button>(R.id.button1)
         btn.setOnClickListener {

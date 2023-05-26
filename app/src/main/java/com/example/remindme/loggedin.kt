@@ -15,6 +15,7 @@ class loggedin : AppCompatActivity() {
     {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_loggedin)
+        supportActionBar?.hide()
 
         val sharedPref = this?.getPreferences(Context.MODE_PRIVATE)?:return
         val isLogin = sharedPref.getString("Email", "1")
@@ -74,7 +75,6 @@ class loggedin : AppCompatActivity() {
         if (email != null) {
             db.collection("USERS").document(email).get().addOnSuccessListener { tasks->
                 name.text = tasks.get("Name").toString()
-                phone.text = tasks.get("Phone").toString()
                 emaillog.text = tasks.get("Email").toString()
             }
         }

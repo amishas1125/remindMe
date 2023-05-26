@@ -28,6 +28,7 @@ class ADD_EVENTS : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_events)
+        supportActionBar?.hide()
 
         val sharedPref = this?.getPreferences(Context.MODE_PRIVATE)?:return
         val isLogin = sharedPref.getString("Email", "1")

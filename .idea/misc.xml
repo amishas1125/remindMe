@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/amish/AndroidStudioProjects/remindMe/app/src/main/res/drawable/baseline_key_24.xml" value="0.1575" />
+        <entry key="..\:/Users/amish/AndroidStudioProjects/remindMe/app/src/main/res/drawable/custom_input.xml" value="0.1" />
+        <entry key="..\:/Users/amish/AndroidStudioProjects/remindMe/app/src/main/res/drawable/custom_input2.xml" value="0.1" />
         <entry key="..\:/Users/amish/AndroidStudioProjects/remindMe/app/src/main/res/drawable/ic_iphone_6__7__8_plus___1.xml" value="0.123" />
         <entry key="..\:/Users/amish/AndroidStudioProjects/remindMe/app/src/main/res/layout/activity_add_events.xml" value="0.22" />
         <entry key="..\:/Users/amish/AndroidStudioProjects/remindMe/app/src/main/res/layout/activity_after_update.xml" value="0.1796875" />
@@ -12,15 +15,17 @@
         <entry key="..\:/Users/amish/AndroidStudioProjects/remindMe/app/src/main/res/layout/activity_edit_profile.xml" value="0.165625" />
         <entry key="..\:/Users/amish/AndroidStudioProjects/remindMe/app/src/main/res/layout/activity_events_page.xml" value="0.17798913043478262" />
         <entry key="..\:/Users/amish/AndroidStudioProjects/remindMe/app/src/main/res/layout/activity_forgotpass_page.xml" value="0.22" />
-        <entry key="..\:/Users/amish/AndroidStudioProjects/remindMe/app/src/main/res/layout/activity_loggedin.xml" value="0.22" />
+        <entry key="..\:/Users/amish/AndroidStudioProjects/remindMe/app/src/main/res/layout/activity_loggedin.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/amish/AndroidStudioProjects/remindMe/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/amish/AndroidStudioProjects/remindMe/app/src/main/res/layout/activity_pdf_reader.xml" value="0.1" />
         <entry key="..\:/Users/amish/AndroidStudioProjects/remindMe/app/src/main/res/layout/activity_pdf_reader_java.xml" value="0.165625" />
         <entry key="..\:/Users/amish/AndroidStudioProjects/remindMe/app/src/main/res/layout/activity_register.xml" value="0.22" />
         <entry key="..\:/Users/amish/AndroidStudioProjects/remindMe/app/src/main/res/layout/activity_select_file.xml" value="0.165625" />
+        <entry key="..\:/Users/amish/AndroidStudioProjects/remindMe/app/src/main/res/layout/activity_splash.xml" value="0.14673913043478262" />
         <entry key="..\:/Users/amish/AndroidStudioProjects/remindMe/app/src/main/res/layout/activity_update.xml" value="0.17798913043478262" />
         <entry key="..\:/Users/amish/AndroidStudioProjects/remindMe/app/src/main/res/layout/activity_view_events.xml" value="0.1796875" />
         <entry key="..\:/Users/amish/AndroidStudioProjects/remindMe/app/src/main/res/layout/list_item.xml" value="0.1796875" />
+        <entry key="..\:/Users/amish/AndroidStudioProjects/remindMe/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
       </map>
     </option>
   </component>
